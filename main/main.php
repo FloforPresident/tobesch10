@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bullshit Bingo</title>
+        <title>Startseite</title>
     </head>
     <body>
         <?php include "../nav/nav.php" ?>

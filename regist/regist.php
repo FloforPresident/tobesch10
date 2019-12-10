@@ -2,16 +2,11 @@
 <html>
     <head>
         <title>Registrieren</title>
-        <link rel="stylesheet" href="regist.css">
         <script type="module" src="registMain.js"></script>
     </head>
     <body>
-        <header>
-            <nav><ul>
-                <li><a href="..\index.php">Startseite</a></li>
-                <li>Registrieren</li>
-            </ul></nav>
-        </header>
+        <?php include "../nav/nav.php" ?>
+
         <main>
             <h2>Registrierung</h2>
             <form name="regist" id="registFormular" action="tryRegist.php" method="post">

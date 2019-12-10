@@ -2,16 +2,9 @@
 <html>
     <head>
         <title>Sprüche</title>
-        <link rel="stylesheet" href="../regist/regist.css">
     </head>
     <body>
-        <header>
-            <nav><ul>
-            <li><a href="..\index.php">Startseite</a></li>
-                <li>Bingo</li>
-                <li><a href="..\regist/regist.php">Registrieren</a></li>
-            </ul></nav>
-        </header>
+        <?php include "../nav/nav.php" ?>
         <main>
             <h2>Bingo</h2>
             <form name="bingo" id="bingoFormular" action="phrasesValidate.php" method="post">
@@ -19,6 +12,7 @@
                 <button type="submit" name="submit">Abschicken</button>
             </form>
 
+            <p id="message">
             <?php
                 if(isset($_GET['phrase'])){
                     if($_GET['phrase'] == 'true'){

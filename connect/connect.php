@@ -1,4 +1,6 @@
-<?php include "../config/config.php";
+<?php
+
+    $db = "testdb";
 
     try{
         $pdo = new PDO("mysql:host=localhost;dbname={$db}" , 'root', '');
