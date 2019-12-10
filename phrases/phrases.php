@@ -14,7 +14,7 @@
         </header>
         <main>
             <h2>Bingo</h2>
-            <form name="bingo" id="bingoFormular" action="bingoValidate.php" method="post">
+            <form name="bingo" id="bingoFormular" action="phrasesValidate.php" method="post">
                 <input type="text" id="phrase" name="phrase" placeholder="Dummer Spruch"><br>
                 <button type="submit" name="submit">Abschicken</button>
             </form>
