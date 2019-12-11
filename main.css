@@ -1,14 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-h2{font-family: Helvetica;}
+h1,h2{
+    font-family: Helvetica;
+}
+
+h1,h2,p{
+    padding:1rem 0;
+}
 
 /* Navigation */
 header{
     background-color: #333333;
-    position:fixed;
+    position:absolute;
     top:0; left:0;
     padding:1rem;
+    height:100%
 }
 header ul{
     margin:0; padding:2rem;;
@@ -22,6 +34,21 @@ header ul li{
 header ul li a{
     color: #EEEEEE;
 }
+
+
+.feed{
+    max-width: 500px;
+    border-bottom: 1px solid grey;
+    padding:2rem 1rem;
+}
+.feed:last-child{
+    border: none;
+}
+
+
+
+
+
 
 /* Formular */
 main{
