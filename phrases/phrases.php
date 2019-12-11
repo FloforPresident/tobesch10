@@ -5,6 +5,7 @@
     </head>
     <body>
         <?php include "../nav/nav.php" ?>
+        <?php include "../connect/connect.php" ?>
         <main>
             <h2>Bingo</h2>
             <form name="bingo" id="bingoFormular" action="phrasesValidate.php" method="post">
@@ -24,6 +25,26 @@
                 }
             ?>
             </p>
+
+            <hr>
+
+            <div id="phraselist">
+                <?php
+                    $phrase = "SELECT * FROM phrases"; 
+                    echo("<table>");
+                    foreach($pdo->query($phrase) as $col)
+                    {
+                        echo("<tr><td>" . $col["phrase"] . "</td><td>");
+                        if($col["checked"] == 1){
+                            echo("<td><input type='checkbox' name='".$col["phrase"]."' checked /></td></tr>");
+                        }else{
+                            echo("<td><input type='checkbox' name='".$col['phrase']."'/></td></tr>");
+                        };
+                    }
+                    echo("</table>");
+                ?>
+            </div>
+
         </main>
     </body>
 </html>
