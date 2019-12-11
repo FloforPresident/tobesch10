@@ -54,10 +54,10 @@ header ul li a{
 main{
     margin-left: 250px;
 }
-main form input{
+form input{
     margin-bottom: .5rem;
 }
-main form button{
+form button{
     padding:.5rem;
     background-color: #333333;
     border:none;
