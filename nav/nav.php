@@ -17,7 +17,15 @@
                 <li><a href="../main/main.php">Startseite</a></li>
                 <li><a href="../bingo/bingo.php">Bingo</a></li>
                 <li><a href="../phrases/phrases.php">Phrasen</a></li>
-                <li><a href="../regist/regist.php">Account</a></li>
+                <li>
+                    <a href="../regist/regist.php">
+                        <?php if(isset($_SESSION['user_id'])){
+                            echo "Abmelden";
+                        }
+                        else{ echo "Anmelden";}
+                        ?>
+                    </a>
+                </li>
             </ul></nav>
         </header>
     </body>
