@@ -14,7 +14,6 @@ h1,h2,p{
     padding:1rem 0;
 }
 
-/* Navigation */
 header{
     background-color: #333333;
     position:absolute;
@@ -46,11 +45,6 @@ header ul li a{
 }
 
 
-
-
-
-
-/* Formular */
 main{
     margin-left: 250px;
 }
@@ -68,8 +62,6 @@ form button{
     color: grey;
 }
 
-
-/*Tabelle*/
 table{
     border-collapse: collapse;  
 }
@@ -82,4 +74,11 @@ td{
 hr{
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+.flag{
+    cursor: pointer;
+    width:128px;
+    height: 70px;
+    padding:1rem
 }

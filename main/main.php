@@ -2,11 +2,23 @@
 <html>
     <head>
         <title>Startseite</title>
+
+        <script>
+            function showLanguage(language){
+                alert("baguette")
+            }
+        </script>
     </head>
     <body>
         <?php include "../nav/nav.php" ?>
 
         <main>
+            <section id="changeLanguage">
+                <h2>Auf welcher Sprache soll dir diese Seite angezeigt werden?</h2>
+                <img class="flag" onclick="showLanguage(this)" src="../images/germany-flag-icon-128.png">
+                <img class="flag" onclick="showLanguage(this)" src="../images/france-flag-icon-128.png">
+            </section>
+
             <section class="feed">
                 <h2>Cool Kids Dance like Zyzz</h2>
                 <p>Bei den coolen Kids steht der so genannte Zyzz - Dance hoch im Kurz, hör auf zu twerken und Dance like Zyzz #Sickkunt</p>
