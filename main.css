@@ -67,3 +67,19 @@ form button{
 #message{
     color: grey;
 }
+
+
+/*Tabelle*/
+table{
+    border-collapse: collapse;  
+}
+td{
+    border: 1px solid grey;
+    padding: 0.5rem;
+    padding-right: 3rem;
+}
+
+hr{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

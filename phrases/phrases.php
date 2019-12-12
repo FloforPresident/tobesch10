@@ -34,7 +34,7 @@
                     echo("<table>");
                     foreach($pdo->query($phrase) as $col)
                     {
-                        echo("<tr><td>" . $col["phrase"] . "</td><td>");
+                        echo("<tr><td>" . $col["phrase"] . "</td>");
                         if($col["checked"] == 1){
                             echo("<td><input type='checkbox' name='".$col["phrase"]."' checked /></td></tr>");
                         }else{
