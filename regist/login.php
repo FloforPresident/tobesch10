@@ -13,10 +13,10 @@ if (!empty( $_POST)) {
         if ( password_verify( $_POST['password'], $user['password'] ) ) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $_POST['username'];
-            header('Location: regist.php');
+            header('Location: regist.php?login=true');
         }
         else{
-            header('Location: regist.php');
+            header('Location: regist.php?login=false');
         }
     }
 }

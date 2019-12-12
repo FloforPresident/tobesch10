@@ -14,8 +14,8 @@ function startValidation(){
             error += "Es wurden nicht alle Felder ausgefüllt<br>";
         }
         else{
-            if(user.length < 8){
-                error += "Username muss mindestens 8 Zeichen besitzen<br>";        
+            if(user.length < 3){
+                error += "Username muss mindestens 3 Zeichen besitzen<br>";        
             }
             if(password.length < 8){
                 error += "Passwort muss mindestens 8 Zeichen besitzen<br>";        
@@ -44,7 +44,7 @@ function validate(user, password, passwordConf){
     if(user == "" || password == "" || passwordConf == ""){
         return false;
     }
-    if(user.length >= 8 && password.length >= 8 && password == passwordConf){
+    if(user.length >= 3 && password.length >= 8 && password == passwordConf){
         return true;
     }
     return false;

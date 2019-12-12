@@ -7,14 +7,33 @@
     <body>
         <?php include "../nav/nav.php" ?>
 
-        <main>            
+        <main>
+            <p class="message">
+                    <?php
+                        if(isset($_GET['regist'])){
+                            if($_GET['regist'] == 'true'){
+                                echo 'Sie wurden erfolgreich registriert';
+                            }
+                            else{
+                                echo 'Username ist bereits vorhanden';
+                            }
+                        }
+                        if(isset($_GET['login'])){
+                            if($_GET['login'] == 'true'){
+                                echo "Hi " .  $_SESSION['username'];
+                            }
+                            else{
+                                echo "Da stimmt was nicht";
+                            }
+                        }
+                    ?>
+            </p>            
+            
             <?php if(isset($_SESSION['user_id'])){ ?>
-                <p id="message">Servus <?php echo $_SESSION['username'] ?>, schön dass du dich zeigst</p><br>
-
                 <section id="logout">
                     <h2>Abmelden</h2>
                         <form action="logout.php" method="post">
-                        <button type="submit" name="submit">Und los!</button>
+                        <button type="submit" name="submit">Verschwind du Säckel!</button>
                     </form>
                 </section>
             <?php } 
@@ -27,19 +46,6 @@
                         <input type="password" id="passConfirm" name="Confirm" placeholder="Passwort bestätigen"><br>
                         <button type="button" name="registButton" onclick="startValidation()">Registrieren</button>
                     </form>
-
-                    <p id="message">
-                    <?php
-                        if(isset($_GET['regist'])){
-                            if($_GET['regist'] == 'true'){
-                                echo 'Sie wurden erfolgreich registriert';
-                            }
-                            else{
-                                echo 'Username ist bereits vorhanden';
-                            }
-                        }
-                    ?>
-                    </p>
                 </section>
 
                 <section id="login">
@@ -50,7 +56,7 @@
                         <button type="submit" name="submit">Und los!</button>
                     </form>
                 </section>
-            <?php } ?>
+            <?php } ?>    
         </main>
     </body>
 </html>
